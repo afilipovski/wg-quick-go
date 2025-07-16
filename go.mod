@@ -1,4 +1,4 @@
-module github.com/nmiculinic/wg-quick-go
+module github.com/afilipovski/wg-quick-go
 
 go 1.12
 

@@ -1,6 +1,6 @@
 # wg-quick-go
 
-[![Build Status](https://gitlab.com/neven-miculinic/wg-quick-go/badges/master/pipeline.svg)](https://gitlab.com/neven-miculinic/wg-quick-go/pipelines) [![GoDoc](https://godoc.org/github.com/nmiculinic/wireguardctrl?status.svg)](https://godoc.org/github.com/nmiculinic/wg-quick-go) [![Go Report Card](https://goreportcard.com/badge/github.com/nmiculinic/wg-quick-go)](https://goreportcard.com/report/github.com/nmiculinic/wg-quick-go)
+[![Build Status](https://gitlab.com/neven-miculinic/wg-quick-go/badges/master/pipeline.svg)](https://gitlab.com/neven-miculinic/wg-quick-go/pipelines) [![GoDoc](https://godoc.org/github.com/afilipovski/wireguardctrl?status.svg)](https://godoc.org/github.com/afilipovski/wg-quick-go) [![Go Report Card](https://goreportcard.com/badge/github.com/afilipovski/wg-quick-go)](https://goreportcard.com/report/github.com/afilipovski/wg-quick-go)
 
 wg-quick like library in go for embedding
 
