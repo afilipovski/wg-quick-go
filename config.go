@@ -132,6 +132,7 @@ const (
 	unknown parseState = iota
 	inter              = iota
 	peer               = iota
+	lazywg             = iota		
 )
 
 func (cfg *Config) UnmarshalText(text []byte) error {
@@ -150,6 +151,8 @@ func (cfg *Config) UnmarshalText(text []byte) error {
 			state = peer
 			cfg.Peers = append(cfg.Peers, wgtypes.PeerConfig{})
 			peerCfg = &cfg.Peers[len(cfg.Peers)-1]
+		case "[LazyWg]":
+			state = lazywg
 		default:
 			parts := strings.Split(ln, "=")
 			if len(parts) < 2 {
@@ -167,6 +170,8 @@ func (cfg *Config) UnmarshalText(text []byte) error {
 				if err := parsePeerLine(peerCfg, lhs, rhs); err != nil {
 					return fmt.Errorf("[line %d]: %v", no+1, err)
 				}
+			case lazywg:
+				continue
 			default:
 				return fmt.Errorf("[line %d] cannot parse, unknown state", no+1)
 			}
